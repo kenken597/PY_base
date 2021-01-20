@@ -9,4 +9,5 @@ while space != " ":
     space = input("Введите любой элемент ")
     user_list.append(space)
 user_list.pop(-1)
+
 print(user_list)
