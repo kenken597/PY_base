@@ -18,7 +18,7 @@ elif my_list[-1] > new_elem: #correct
     my_list.append(new_elem)
 else:
     for i in range(len(my_list)):
-        if my_list[i] == new_elem :
+        if my_list[i] == new_elem:
             my_list.insert(i + 1, new_elem)
             break
 print(f'Новый рейтинг {my_list}')
