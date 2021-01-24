@@ -7,4 +7,16 @@
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
 
-
+my_list = [6, 5, 4, 3, 2]
+new_elem = int(input("Введите значение рейтинга "))
+print(f'Начальный рейтинг {my_list}')
+for i in range(len(my_list)):
+    if my_list[0] <= new_elem:
+        my_list.insert(0, new_elem)
+        break
+    elif my_list[-1] >= new_elem:
+        my_list.append(new_elem)
+        break
+    elif my_list[i] > new_elem:
+        my_list.insert(i + 1, new_elem)
+print(f'Новый рейтинг {my_list}')
