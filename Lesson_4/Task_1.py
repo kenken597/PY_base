@@ -2,8 +2,12 @@
 # В расчете необходимо использовать формулу: (выработка в часах * ставка в час) + премия.
 # Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 
-def wage(hours, cash, extra):
-    wage = (hours * cash) + extra
-    return wage
+from sys import argv
 
-print(f'Workers wage - {wage((int(input("Hours "))), (int(input("Cash "))), (int(input("Extra "))))}')
+zero, hours, cash, extra = argv
+
+hours = int(hours)
+cash = int(cash)
+extra = int(extra)
+wage = hours * cash +extra
+print(f'Заработная плата - {wage}')
